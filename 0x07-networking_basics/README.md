@@ -116,3 +116,37 @@ Port Numbers for SSH, HTTP, and HTTPS:
 Tool/Protocol to Check if a Device is Connected to a Network:
 
     The Internet Control Message Protocol (ICMP) is often used to check if a device is connected to a network. The ping tool, which is based on ICMP, is commonly used to send echo requests and receive echo replies. If a device is reachable, it responds to the ping, indicating its connectivity.
+
+
+
+
+netstat:
+-------
+netstat is a command-line tool used to display network-related information on a computer. The specific capabilities and options of netstat can vary across different operating systems.
+
+Display all active connections:
+netstat -a
+
+Display listening ports:
+netstat -l
+
+Display network statistics:
+netstat -s
+
+Display routing table:
+netstat -r
+
+
+ping
+-----
+
+ping is a command-line tool used to test the reachability of a host on an Internet Protocol (IP) network. It sends ICMP Echo Request messages to the target host and waits for an Echo.
+
+Basic ping to a host:
+ping example.com
+
+Specify the number of packets to send:
+ping -c 4 example.com
+
+Set the interval between packets:
+ping -i 2 example.com
