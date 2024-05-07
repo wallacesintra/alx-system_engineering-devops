@@ -24,6 +24,7 @@ def number_of_subscribers(subreddit):
     req = requests.get(
         url,
         headers=headers,
+        allow_redirects=False
     )
 
     if req.status_code == 200:
