@@ -17,9 +17,13 @@ def number_of_subscribers(subreddit):
     reddit = number_of_subscribers('redditdev')
     """
 
+    url = "https://www.reddit.com/r/{}/about.json".format(subreddit)
+    headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)\
+               AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77\
+               Safari/537.36"}
     req = requests.get(
-        "https://www.reddit.com/r/{}/about.json".format(subreddit),
-        headers={"User-Agent": "Custom"},
+        url,
+        headers=headers,
     )
 
     if req.status_code == 200:
